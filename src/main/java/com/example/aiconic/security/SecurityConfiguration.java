@@ -24,7 +24,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/**")
+                .requestMatchers("/**", "http://localhost:3000", "http://localhost:3001")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
